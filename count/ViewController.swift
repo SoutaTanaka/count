@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var namber:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +22,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func sss(sender: AnyObject) {
+        namber = namber + 1
+        label.text = String(namber)
+        if (namber >= 10){
+            label.textColor = UIColor.redColor()
+        
+        }
+    }
 
 }
 
